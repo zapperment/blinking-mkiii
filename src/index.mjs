@@ -1,5 +1,14 @@
-import getPortNameFromArgs from "./getPortNameFromArgs.mjs";
+import { Input, Output } from "easymidi";
+import initialisePort from "./initialisePort.mjs";
 
-//getPortNameFromArgs();
-//console.log(Object.keys(process.env).join("\n"));
-console.log(process.env.MIDI_IN);
+const input = initialisePort(Input, {
+  envKey: "MIDI_IN",
+  prettyName: "MIDI in port",
+});
+
+const output = initialisePort(Output, {
+  envKey: "MIDI_OUT",
+  prettyName: "MIDI out port",
+});
+
+console.log("Success");

@@ -1,7 +1,8 @@
 {
   "name": "blinking-mkiii",
   "scripts": {
-    "start": "node --env-file=.env src/index.mjs"
+    "start": "node --env-file=.env src/index.mjs",
+    "list-ports": "node src/listPorts.mjs"
   },
   "packageManager": "yarn@3.6.3",
   "devDependencies": {
